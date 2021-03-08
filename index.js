@@ -2,9 +2,11 @@ var loaded = false;
 window.addEventListener("load", function() {
   if (!loaded) {
     var coll = document.getElementsByClassName("collapsibleBtn");
-    var i;
+    var startingLeft = document.getElementById("collapsibleDiv1");
+    startingLeft.style.display = "block";
+    startingLeft.style.maxHeight = startingLeft.scrollHeight + "px";
 
-    for (i = 0; i < coll.length; i++) {
+    for (var i = 0; i < coll.length; i++) {
       coll[i].onclick = function(e) {
         drawerClick(e);
       };
@@ -13,13 +15,28 @@ window.addEventListener("load", function() {
   }
 });
 
-function drawerClick() {
-  var content = document.getElementById("collapsibleDiv");
-  if (content.style.maxHeight != "0px") {
-    content.style.maxHeight = "0px";
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-    content.style.maxHeight = content.scrollHeight + "px";
+function drawerClick(e) {
+  var id = event.srcElement.id;
+  var content = document.getElementById("collapsibleDiv" + id);
+  if (content.style.maxHeight == "0px" || content.style.maxHeight == "") {
+    {
+      for (
+        var j = 1;
+        j < document.getElementsByClassName("collapsibleBtn").length + 1;
+        j++
+      ) {
+        if (j != id) {
+          var otherDrawers = document.getElementById("collapsibleDiv" + j);
+          otherDrawers.style.maxHeight = "0px";
+          setTimeout(function() {
+            otherDrawers.style.display = "none";
+          }, 300);
+        }
+      }
+      setTimeout(function() {
+        content.style.display = "block";
+        content.style.maxHeight = content.scrollHeight + "px";
+      }, 500);
+    }
   }
 }
