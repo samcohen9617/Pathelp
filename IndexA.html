@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <style>
+      .introDiv {
+        display: flex;
+      
+      }
+      .header {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+      }
+      .splitDiv {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+      .column {
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+         padding-left: 30px;
+         padding-right: 30px;
+
+        overflow-y: scroll;
+      }
+      .innerColumn {
+        max-width: 100%; 
+      }
+      .splitDivWrapper {
+        height: 100vh;
+      }
+      .contentText {
+        text-align: center;
+      }
+      .aboutText {
+        text-align: center;
+      }
+      .contentImageImg {
+        max-width: 100%;
+      }
+      .EndText {
+        padding-bottom: 0px;
+        padding-top: 100px;
+      }
+      .contentPane {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+      .ColumnTitles{
+        display: flex;
+        height: 100px;
+        width: 100%;
+        padding-bottom: 50;
+      }
+      .HalfPageColumnTitle{
+        flex: 50%;
+            text-align: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="introDiv">
+        <div class="header">
+          <center><img src="Images/australianbluetreefrog.png" style="
+          width: 300px;" /></center>
+          <center><h2 style="margin-bottom: 0px">Patrick Dawson</h2></center>
+          <div class="aboutText"><p style="margin-top: 10px">Northeastern Architecture Student.  Likes computers and flowers and sea breezes.</p></div>
+          <br /> <br /> <br /> <br />
+        </div>
+        
+    </div>
+    <div class="ColumnTitles"> 
+          <div class="HalfPageColumnTitle"> <h1> THE HISTORY </h1>  <h3>(Ongoing)</h3>
+
+        </div>
+         <div class="HalfPageColumnTitle"> <h1> THE PROPOSAL </h1>  <h3> (Work in Progress) </h3><br>
+          
+        </div>
+      </div>
+      <div class="splitDivWrapper">
+        <div class="splitDiv">
+          <div class="column">
+            <div class="innerColumn">
+
+
+              <div class="contentPane">
+                <div class="contentImage">
+                     <img class="contentImageImg" src="Images/ina blow to.jpg"> 
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Recent Approval
+                  </p>
+                </div>
+              </div>
+
+              <div class="contentPane">
+                 <div class="contentImage">
+                     <img class="contentImageImg" src="Images/zoom protest.jpg"> 
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Zoom Protest
+                  </p>
+                </div>
+              </div>
+
+              <div class="contentPane">
+                <div class="contentImage">
+                     <img class="contentImageImg" src="Images/fragmented site.jpg"> 
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Site of Focus
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="contentPane">
+                <div class="contentImage">
+                  <img class="contentImageImg" src="Images/american-green-tree-frog.jpg" />
+                </div>
+                <br />
+                <div class="contentText">
+                  <h3>
+                    This Frog is one of my pets. He looks like my Frog Percy
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="innerColumn">
+              <div class="contentPane">
+                <div class="contentImage">
+                  <img class="contentImageImg" src="Images/Perspective 1.jpg" />
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Houses
+                  </p>
+                </div>
+              </div>
+              <div class="contentPane">
+                <div class="contentImage">
+                  <img class="contentImageImg" src="Images/Perspective 2.jpg" />
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Playgrounds
+                  </p>
+                </div>
+              </div>
+               <div class="contentPane">
+                <div class="contentImage">
+                  <img class="contentImageImg" src="Images/Perspective 3.jpg" />
+                </div>
+                <br />
+                <div class="contentText">
+                  <p>
+                    Wild
+                  </p>
+                </div>
+              </div>
+              <div class="contentPane">
+                <div class="contentImage">
+                  <img class="contentImageImg" src="Images/Litoria_caerulea_-_Darwin_NT.jpg" />
+                </div>
+                <br />
+                <div class="contentText">
+                  <h3>
+                    This Frog is one of my pets.  His name is Frog Sneaky Leaper.
+                  </h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="EndText"> <center> <h1>Assignment Requirement:</center>
+    </div>
+    </div>
+    <center><p>Processing Script</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+
+  <script type="application/processing">
+    void setup() {
+  size(800,943);
+  background(255);
+  
+  fill(255,0,0);
+  textSize (24);
+  text("I love it!",230,400);
+  
+  fill(0,0,255);
+  textSize (24);
+  text("I don't love it!",460,400);
+  
+  
+  fill(255,0,0);
+  textSize (24);
+  text("I love it!",230,880);
+  
+    fill(0,0,255);
+  textSize (24);
+  text("I don't love it!",460,880);
+  
+  ;
+  
+}
+
+void draw() {
+
+stroke(255);
+fill(0);
+rect(320, 75, 93, 216);
+
+stroke(255);
+fill(0);
+rect(250,218,127,73);
+
+stroke(255);
+fill(0);
+rect(420,150,127,140);
+
+stroke(255);
+fill(0);
+rect(400,290,75,-190);
+
+
+stroke(255);
+fill(0);
+rect(320,620,87,150);
+
+stroke(255);
+fill(0);
+rect(380,770,125,-190);
+
+}
+
+  </script>
+<canvas><!---HERE IT BE--></canvas></center>
+  </body>
+</html>
