@@ -55,8 +55,10 @@
 .buttonContainer {
   display: flex;
   height: 50px;
-  position: absolute;
+  position: sticky;
   width: 100%;
+  z-index: 100;
+  top: 0;
 }
 
 .drawerButton {
@@ -69,6 +71,13 @@
   position: relative;
   overflow-y: scroll;
   flex: 50%;
-  display: flex;
   justify-content: center;
+}
+
+.collapsibleDiv {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
 }

@@ -1,7 +1,9 @@
 <html>
   <head>
       <link rel="stylesheet" href="index.css">
+      <script src="index.js"></script>
   </head>
+      
   <body>
     <div>
       <div class="introDiv">
@@ -26,14 +28,14 @@
         <div class="splitDiv">
           <div class="columnWrapper">
             <div class="buttonContainer">
-              <div class="drawerButton"></div>
+              <div class="drawerButton"><button onclick="click()" type="button" class="collapsibleBtn">Open Collapsible One</button></div>
               <div class="drawerButton"></div>
               <div class="drawerButton"></div>
             </div>
            
 
           <div class="column">
-            
+            <div class="collapsibleDiv" id="collapsibleDiv"> <h1>Testing 545</h1></div>
             
             <div class="innerColumn">
 
@@ -153,7 +155,9 @@
     </div>
     <center><p>Processing Script</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
-
+<script>function click() {
+    console.log("Shesf");
+  }</script>
   <script type="application/processing">
     void setup() {
   size(800,943);
