@@ -44,6 +44,20 @@ function drawerClick(e) {
 function expand(side) {
   var columnWrapperToExpand = document.getElementById("columnWrapper" + side);
 
+  //Switching expand button to close button
+  var expandButton = columnWrapperToExpand.getElementsByClassName(
+    "expandDivOn" + side
+  )[0];
+  expandButton.style.opacity = 0;
+
+  var evenOutDiv = columnWrapperToExpand.getElementsByClassName(
+    "evenOutDiv"
+  )[0];
+  evenOutDiv.style.display = "block";
+  setTimeout(function() {
+    evenOutDiv.style.opacity = 1;
+  }, 300);
+
   var otherSide = side == "Left" ? "Right" : "Left";
   var columnWrapperToShrink = document.getElementById(
     "columnWrapper" + otherSide
@@ -59,6 +73,21 @@ function expand(side) {
 function evenOut() {
   document.getElementById("columnWrapperRight").style.animation = "even 2s";
   document.getElementById("columnWrapperLeft").style.animation = "even 2s";
+
+  var expandButtonDiv = document.getElementsByClassName("expandDivOnRight")[0];
+  expandButtonDiv.style.opacity = 1;
+  expandButtonDiv = document.getElementsByClassName("expandDivOnLeft")[0];
+  expandButtonDiv.style.opacity = 1;
+
+  var evenOutButtonDivs = document.getElementsByClassName("evenOutDiv");
+  for (var i = 0; i < evenOutButtonDivs.length; i++) {
+    evenOutButtonDivs[i].style.opacity = 0;
+  }
+  setTimeout(function() {
+    evenOutButtonDivs[0].style.display = "none";
+    evenOutButtonDivs[1].style.display = "none";
+  }, 500);
+
   setTimeout(function() {
     document.getElementById("columnWrapperRight").style.flex = 0.5;
     document.getElementById("columnWrapperLeft").style.flex = 0.5;

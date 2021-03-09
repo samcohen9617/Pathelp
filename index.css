@@ -26,6 +26,9 @@
 .contentText {
   text-align: center;
 }
+.contentImage {
+  text-align: center;
+}
 .aboutText {
   text-align: center;
 }
@@ -69,26 +72,51 @@
 
 .columnWrapper {
   position: relative;
-  overflow-y: scroll;
+  overflow-y: hidden;
   flex: 50%;
 
   justify-content: center;
 }
+.columnWrapper:hover {
+  overflow-y: scroll;
+}
 
-.expandDivLeft {
+.expandDivOnLeft {
   width: 25px;
   position: absolute;
   background-color: blue;
   height: 25px;
   right: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
 }
 
-.expandDivRight {
+.expandDivOnRight {
   width: 25px;
   position: absolute;
   background-color: blue;
   height: 25px;
   left: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+}
+
+.evenOutDiv {
+  width: 25px;
+  position: absolute;
+  height: 25px;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  background-color: green;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
 }
 
 .collapsibleDiv {
@@ -122,4 +150,25 @@
   100% {
     flex: 0.5;
   }
+}
+
+/*scrollbar*/
+
+div.columnWrapper::-webkit-scrollbar {
+  width: 5px;
+}
+div.columnWrapper::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+div.columnWrapper::-webkit-scrollbar:hover {
+  width: 40px;
+}
+
+.scrollSpot {
+  height: 100%;
+  width: 16px;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
 }
