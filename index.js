@@ -30,7 +30,7 @@ function drawerClick(e) {
           otherDrawers.style.maxHeight = "0px";
           setTimeout(function() {
             otherDrawers.style.display = "none";
-          }, 300);
+          }, 400);
         }
       }
       setTimeout(function() {

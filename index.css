@@ -64,6 +64,7 @@
   width: 100%;
   height: 100%;
   background-color: red;
+  text-align: center;
 }
 
 .columnWrapper {
@@ -74,11 +75,11 @@
 }
 
 .collapsibleDiv {
-  padding: 0 18px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
   max-height: 0px;
   width: 100%;
+  text-align: center;
 }
