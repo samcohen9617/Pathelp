@@ -71,15 +71,55 @@
   position: relative;
   overflow-y: scroll;
   flex: 50%;
+
   justify-content: center;
+}
+
+.expandDivLeft {
+  width: 25px;
+  position: absolute;
+  background-color: blue;
+  height: 25px;
+  right: 0;
+}
+
+.expandDivRight {
+  width: 25px;
+  position: absolute;
+  background-color: blue;
+  height: 25px;
+  left: 0;
 }
 
 .collapsibleDiv {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
-  transition: max-height 0.4s ease-out;
+  transition: max-height 1s ease-out;
   max-height: 0px;
   width: 100%;
   text-align: center;
+}
+
+@keyframes expand {
+  0% {
+    flex: 0.5;
+  }
+  100% {
+    flex: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    flex: 0.5;
+  }
+  100% {
+    flex: 0;
+  }
+}
+@keyframes even {
+  100% {
+    flex: 0.5;
+  }
 }

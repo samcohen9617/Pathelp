@@ -30,7 +30,7 @@ function drawerClick(e) {
           otherDrawers.style.maxHeight = "0px";
           setTimeout(function() {
             otherDrawers.style.display = "none";
-          }, 400);
+          }, 900);
         }
       }
       setTimeout(function() {
@@ -39,4 +39,28 @@ function drawerClick(e) {
       }, 500);
     }
   }
+}
+
+function expand(side) {
+  var columnWrapperToExpand = document.getElementById("columnWrapper" + side);
+
+  var otherSide = side == "Left" ? "Right" : "Left";
+  var columnWrapperToShrink = document.getElementById(
+    "columnWrapper" + otherSide
+  );
+  columnWrapperToExpand.style.animation = "expand 2s";
+  columnWrapperToShrink.style.animation = "shrink 2s";
+  setTimeout(function() {
+    columnWrapperToExpand.style.flex = 1;
+    columnWrapperToShrink.style.flex = 0;
+  }, 2000);
+}
+
+function evenOut() {
+  document.getElementById("columnWrapperRight").style.animation = "even 2s";
+  document.getElementById("columnWrapperLeft").style.animation = "even 2s";
+  setTimeout(function() {
+    document.getElementById("columnWrapperRight").style.flex = 0.5;
+    document.getElementById("columnWrapperLeft").style.flex = 0.5;
+  }, 2000);
 }

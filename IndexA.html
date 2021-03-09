@@ -26,11 +26,12 @@
       </div>
       <div class="splitDivWrapper">
         <div class="splitDiv">
-          <div class="columnWrapper">
+          <div class="columnWrapper" id="columnWrapperLeft">
             <div class="buttonContainer">
               <div class="drawerButton"><button id="1" type="button" class="collapsibleBtn">Open Collapsible One</button></div>
               <div class="drawerButton"><button id="2" type="button" class="collapsibleBtn">Open Collapsible Two</button></div>
               <div class="drawerButton"><button id="3" type="button" class="collapsibleBtn">Open Collapsible Three</button></div>
+              <div onclick="expand('Left')" class="expandDivLeft"></div>
             </div>
            
 
@@ -87,8 +88,9 @@
             <div class="collapsibleDiv" id="collapsibleDiv3"> <h1>Third Test 545</h1></div>
           </div>
         </div>
-        <div class="columnWrapper">
+        <div class="columnWrapper" id="columnWrapperRight">
           <div class="buttonContainer">
+              <div onclick="expand('Right')" class="expandDivRight"></div>
               <div class="drawerButton"></div>
               <div class="drawerButton"></div>
               <div class="drawerButton"></div>
