@@ -1,6 +1,9 @@
 var loaded = false;
 window.addEventListener("load", function() {
   if (!loaded) {
+    document.getElementsByClassName("splitDivWrapper")[0].style.height =
+      "100vh";
+
     var coll = document.getElementsByClassName("collapsibleBtn");
     var startingLeft = document.getElementById("collapsibleDiv1");
     startingLeft.style.display = "block";
@@ -62,6 +65,11 @@ function expand(side) {
   var columnWrapperToShrink = document.getElementById(
     "columnWrapper" + otherSide
   );
+
+  //Expanding colored cover over side to shrink
+  document.getElementById("cover" + otherSide).style.width = "100%";
+
+  //Expanding the selected side
   columnWrapperToExpand.style.animation = "expand 2s";
   columnWrapperToShrink.style.animation = "shrink 2s";
   setTimeout(function() {
@@ -79,14 +87,27 @@ function evenOut() {
   expandButtonDiv = document.getElementsByClassName("expandDivOnLeft")[0];
   expandButtonDiv.style.opacity = 1;
 
+  //Fading out even out buttons
   var evenOutButtonDivs = document.getElementsByClassName("evenOutDiv");
   for (var i = 0; i < evenOutButtonDivs.length; i++) {
     evenOutButtonDivs[i].style.opacity = 0;
   }
+
+  //Hiding even out buttons after they are no longer needed
   setTimeout(function() {
     evenOutButtonDivs[0].style.display = "none";
     evenOutButtonDivs[1].style.display = "none";
   }, 500);
+
+  //Pulling back curtain from shrunken but now expanding side
+
+  setTimeout(function() {
+    var coverSliders = document.getElementsByClassName("coverSliderDiv");
+    for (var i = 0; i < coverSliders.length; i++)
+      if (coverSliders[i].style.width == "100%") {
+        coverSliders[i].style.width = "0";
+      }
+  }, 1000);
 
   setTimeout(function() {
     document.getElementById("columnWrapperRight").style.flex = 0.5;
