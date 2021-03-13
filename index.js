@@ -1,9 +1,6 @@
 var loaded = false;
 window.addEventListener("load", function() {
   if (!loaded) {
-    document.getElementsByClassName("splitDivWrapper")[0].style.height =
-      "100vh";
-
     var coll = document.getElementsByClassName("collapsibleBtn");
     var startingLeft = document.getElementById("collapsibleDiv1");
     startingLeft.style.display = "block";
@@ -113,4 +110,9 @@ function evenOut() {
     document.getElementById("columnWrapperRight").style.flex = 0.5;
     document.getElementById("columnWrapperLeft").style.flex = 0.5;
   }, 2000);
+}
+
+function expandDown() {
+  document.getElementsByClassName("dropdownContentWrapper")[0].style.height =
+    "100vh";
 }

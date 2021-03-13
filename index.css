@@ -1,11 +1,12 @@
 .introDiv {
-  display: flex;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
-.header {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-}
+
 .splitDiv {
   display: flex;
   width: 100%;
@@ -21,8 +22,7 @@
   padding-right: 30px;
 }
 .splitDivWrapper {
-  height: 0;
-  -webkit-transition: height 2s;
+  height: 90vh;
 }
 .contentText {
   text-align: center;
@@ -49,6 +49,7 @@
   height: 100px;
   width: 100%;
   padding-bottom: 50;
+  background-color: white;
 }
 .HalfPageColumnTitle {
   flex: 50%;
@@ -74,8 +75,9 @@
 .columnWrapper {
   position: relative;
   overflow-y: scroll;
+  overflow-x: hidden;
   flex: 50%;
-
+  background-color: white;
   justify-content: center;
 }
 
@@ -179,4 +181,10 @@ div.columnWrapper:hover:-webkit-scrollbar {
 
 #coverLeft {
   right: 0;
+}
+
+.dropdownContentWrapper {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 5s;
 }
