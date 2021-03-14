@@ -6,6 +6,10 @@ window.addEventListener("load", function() {
     startingLeft.style.display = "block";
     startingLeft.style.maxHeight = startingLeft.scrollHeight + "px";
 
+    var startingRight = document.getElementById("collapsibleDiv4");
+    startingRight.style.display = "block";
+    startingRight.style.maxHeight = startingRight.scrollHeight + "px";
+
     for (var i = 0; i < coll.length; i++) {
       coll[i].onclick = function(e) {
         drawerClick(e);
@@ -20,11 +24,16 @@ function drawerClick(e) {
   var content = document.getElementById("collapsibleDiv" + id);
   if (content.style.maxHeight == "0px" || content.style.maxHeight == "") {
     {
-      for (
-        var j = 1;
-        j < document.getElementsByClassName("collapsibleBtn").length + 1;
-        j++
-      ) {
+      var startIdx;
+      var endIdx;
+      if (id <= 3) {
+        startIdx = 1;
+        endIdx = 4;
+      } else {
+        startIdx = 4;
+        endIdx = 7;
+      }
+      for (var j = startIdx; j < endIdx; j++) {
         if (j != id) {
           var otherDrawers = document.getElementById("collapsibleDiv" + j);
           otherDrawers.style.maxHeight = "0px";
@@ -36,7 +45,7 @@ function drawerClick(e) {
       setTimeout(function() {
         content.style.display = "block";
         content.style.maxHeight = content.scrollHeight + "px";
-      }, 500);
+      }, 1000);
     }
   }
 }
@@ -113,6 +122,9 @@ function evenOut() {
 }
 
 function expandDown() {
-  document.getElementsByClassName("dropdownContentWrapper")[0].style.height =
-    "100vh";
+  var dropdownDiv = document.getElementsByClassName(
+    "dropdownContentWrapper"
+  )[0];
+  dropdownDiv.style.height = "100vh";
+  dropdownDiv.style.borderStyle = "dashed";
 }
