@@ -1,5 +1,6 @@
 .introDiv {
   position: relative;
+  margin-bottom: 60px;
 }
 @font-face {
   font-family: 'nimbus_sans_lregular';
@@ -252,4 +253,57 @@ div.columnWrapper:hover:-webkit-scrollbar {
   padding-right: 20px;
   padding-bottom: 10px;
   padding-top: 20px;
+}
+
+.peopleTbl {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.peopleRow {
+  display: flex;
+  min-height: 50px;
+  flex-direction: row;
+  padding-bottom: 50px;
+}
+.peopleCell {
+  flex: 80;
+  font-family: 'nimbus_sans_lregular';
+  color: white;
+  max-width: 33%;
+  flex-wrap: wrap;
+  display: flex;
+}
+.peopleDiv{
+  background-color: #61996e;
+}
+
+.personalInfoTable{
+  display: flex;
+  flex-direction: row;
+}
+.peoplePic{
+  max-width: 100%;
+}
+
+.personalInfoCell{
+  width: 100%;
+}
+
+.personInnerPicCell{
+  flex: 3;
+}
+
+.personInnerTextCell{
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.personalInfoCellThree{
+  justify-content: flex-end;
+  align-items: flex-end;
 }
