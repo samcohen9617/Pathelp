@@ -1,6 +1,21 @@
 .introDiv {
   position: relative;
 }
+@font-face {
+  font-family: 'nimbus_sans_lregular';
+  src: url('fonts/NimbusSanL-Reg-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nimbus_sans_lregular_italic';
+  src: url('fonts/NimbusSanL-RegIta-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 
 .splitDiv {
   display: flex;
@@ -182,4 +197,59 @@ div.columnWrapper:hover:-webkit-scrollbar {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 5s;
+}
+
+.tbl {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.row {
+  display: flex;
+  min-height: 50px;
+}
+.cell {
+  flex: 80;
+  font-family: 'nimbus_sans_lregular';
+  color: white;
+}
+.logoCell {
+  flex: 20;
+  max-height: 200px;
+}
+
+.cell h3{
+  padding-left: 40px;
+}
+.row .logoCell {
+  display: flex;
+  justify-content: center;         /*  center horiz. */
+  align-items: center;             /*  center vert. */
+}
+
+.row .cell {
+  display: flex;        /*  center horiz. */
+  align-items: center;             /*  center vert. */
+}
+.row .cell .logoCell{
+  padding: 5px;
+  box-sizing: border-box;
+}
+.landingInfoDiv{
+  background-color: #5ba3a5;
+}
+
+.landingInfoDiv{
+  color: white;
+}
+.howQuestionDiv{
+  font-family: 'nimbus_sans_lregular_italic';
+}
+.sentenceDiv{
+  font-family: 'nimbus_sans_lregular';
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
