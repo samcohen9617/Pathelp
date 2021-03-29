@@ -81,7 +81,7 @@ function expand(side) {
   setTimeout(function() {
     columnWrapperToExpand.style.flex = 1;
     columnWrapperToShrink.style.flex = 0;
-  }, 2000);
+  }, 1950);
 }
 
 function evenOut() {
@@ -118,7 +118,7 @@ function evenOut() {
   setTimeout(function() {
     document.getElementById("columnWrapperRight").style.flex = 0.5;
     document.getElementById("columnWrapperLeft").style.flex = 0.5;
-  }, 2000);
+  }, 1950);
 }
 
 function expandDown() {
