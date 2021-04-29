@@ -213,7 +213,6 @@ div.columnWrapper:hover:-webkit-scrollbar {
 .cell {
   flex: 80;
   font-family: 'nimbus_sans_lregular';
-  color: white;
 }
 .logoCell {
   flex: 20;
@@ -238,11 +237,11 @@ div.columnWrapper:hover:-webkit-scrollbar {
   box-sizing: border-box;
 }
 .landingInfoDiv{
-  background-color: #5ba3a5;
+  background-color: #ffdcd2;
 }
 
 .landingInfoDiv{
-  color: white;
+  color: #a28080;
 }
 .howQuestionDiv{
   font-family: 'nimbus_sans_lregular_italic';
