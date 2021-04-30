@@ -72,7 +72,7 @@
 
 .buttonContainer {
   display: flex;
-  height: 50px;
+  height: 250px;
   position: sticky;
   width: 100%;
   z-index: 100;
@@ -211,6 +211,7 @@ div.columnWrapper:hover:-webkit-scrollbar {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 5s;
+background-color: #ffe9d3;
 }
 
 .tbl {
@@ -251,6 +252,7 @@ div.columnWrapper:hover:-webkit-scrollbar {
 }
 .landingInfoDiv{
   background-color: #ffdcd2;
+  display: none;
 }
 
 .landingInfoDiv{
