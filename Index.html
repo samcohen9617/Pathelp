@@ -1,87 +1,430 @@
 <html>
-  <head>
-    <style>
-      .mainDiv {
-        display: flex;
-        height: 100vh;
-      }
-      .header {
-        margin: auto;
-      }
-      .splitDiv {
-        display: flex;
-        width: 100%;
-        height: 100%;
-      }
-      .column {
-        flex: 50%;
-        display: flex;
-        justify-content: center;
 
-        overflow-y: scroll;
-      }
-      .innerColumn {
-        height: 10000px;
-      }
-      .splitDivWrapper {
-        height: 100vh;
-      }
-      .contentText {
-        text-align: center;
-      }
-      .aboutText {
-        text-align: center;
-      }
-      .contentImageImg {
-        max-width: 860px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <div class="mainDiv">
-        <div class="header">
-          <img src="Images/Condor Street Site SVG.svg" />
-          <center><h1>PATRICK DAWSON</h1></center>
-          <div class="aboutText"><h2>This is some text about me</h2></div>
-        </div>
+<head>
+
+  <link rel="stylesheet" href="index.css">
+
+  <script src="index.js"></script>
+
+</head>
+
+<body>
+  <div>
+    <div class="mapDiv">
+      <img src="inspiration/210429 Mapdiv Header Outline-10.svg" style="
+        max-width: 100%;" />
+      <img src="newestInspo/210429 Mapdiv Landing Ishe-11.svg" style="
+      max-width: 100%;" />
+      <img src="newestInspo/210429 Mapdiv Landing Ishe-12.svg" style="
+      max-width: 100%;" />
+      <img src="newestInspo/210429 Mapdiv Landing Ishe-13.svg" style="
+      max-width: 100%;" />
+    </div>
+    <div class="landingInfoDiv">
+      <div class="sentenceDiv">
+        <h2>By making this central digital site for all aspects of The Condor Street Site’s cultural landscape, the hope
+          is to inform the public of this ongoing environmental injustice and to help persuade the EFSB to
+          relocate the substation to a Massport-owned site</h2>
       </div>
-      <div class="splitDivWrapper">
-        <div class="splitDiv">
-          <div class="column">
-            <div class="innerColumn">
-              <div class="contentPane">
-                <div class="contentImage">
-                  <img src="Images/american-green-tree-frog.jpg" />
-                </div>
-                <br />
-                <div class="contentText">
-                  <h3>
-                    This Frog is one of my pets. The one that I have is named
-                    percy.
-                  </h3>
-                </div>
-              </div>
+      <div class="howDiv">
+        <div class="howQuestionDiv" style="text-align: center;">
+          <h1>BUT HOW DO YOU DO THAT?</h1>
+        </div>
+        <div class="tbl">
+          <div class="row">
+            <div class="logoCell">
+              <img src="inspiration/210429 Document-09.svg" style="
+              height: 100%;" /></div>
+            <div class="cell">
+              <h3><b>DOCUMENT</b> the facts. This project is sited within a flood plane putting all nearby properties
+                and
+                people at an unfair risk in East Boston, a neighborhood already overburdened with regional and
+                industrial infrastructure.</h3>
             </div>
           </div>
-
-          <div class="column">
-            <div class="innerColumn">
-              <div class="contentPane">
-                <div class="contentImage">
-                  <img class="contentImageImg" src="Images/frog3.jpg" />
-                </div>
-                <br />
-                <div class="contentText">
-                  <h3>
-                    Different Frog
-                  </h3>
-                </div>
-              </div>
+          <div class="row">
+            <div class="logoCell"><img src="inspiration/210429 Communicate-10.svg" style="
+              height: 100%;" /></div>
+            <div class="cell">
+              <h3><b>EDUCATE</b> visitors about the history of East Boston’s unjust infrastructure and
+                Eversource’s previous malpracticess so that a fair future is ensured for the
+                neighborhood. Concessions must be made for violations in the past.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="logoCell"><img src="inspiration/210429 Understand-11.svg" style="
+                height: 100%;" /></div>
+            <div class="cell">
+              <h3><b>UNDERSTAND</b> East Boston as a diverse neighborhood that is largely known
+                by for hosting Logan Airport and all of its fuel. To justify any new project needs
+                to require inclusive design processes that acknowledge all of the different stake-
+                holders and their varied desires for the best outcome possible.</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="logoCell"><img src="inspiration/210429 Organize-12.svg" style="
+                  height: 100%;" /></div>
+            <div class="cell">
+              <h3><b>ORGANIZE</b> physically and digitally. Spread awareness of essential conditions.
+                Create spaces where people can recollect, gather, and vocalize their needs.
+                Make places worthy of witnessing and serving to testify.</h3>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <div class="illustration">
+
+      <img src="inspiration/210329 Site Elements-InSpiteofItAll-10.svg" style="
+      max-width: 100%;" />
+    </div>
+    <div class="peopleDiv">
+      <div class="introDiv">
+        <div class="header">
+          <center><img src="Images/Condor Street Site SVG 2.svg" style="
+                max-width: 1000px;" onclick="expandDown()" /></center>
+        </div>
+      </div>
+      <div class="peopleTbl">
+        <div class="peopleRow">
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-11LauraKozak.svg" /></div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Rebecca Kozak</b>, Resident & Community
+                Organizer</div>
+              <div class="personalInfoCell"><b>Wants:</b> environmental justice in my neighbor-
+                hood</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> safely continue to enjoy
+                public space, feel justice for previous wrongs</div>
+            </div>
+
+          </div>
+
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic" src="inspiration/210329 SitePeople-14KimJaney.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Kim Janey</b>, Boston Mayor</div>
+              <div class="personalInfoCell"><b>Wants:</b> to provide executive leadership, set
+                priorities and goals for the City</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> oversee a time of success for
+                those who reside in Boston</div>
+            </div>
+          </div>
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-17BobClarke.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Bob Clarke</b>, Eversource Sitting Director</div>
+              <div class="personalInfoCell"><b>Wants:</b> to find the best physical site toprovide
+                clean energy to New England</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that he can:</b> maximize profit for
+                shareholders and sustainably power the region</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="peopleRow">
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-12MariaManrique.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Maritza Manrique</b>, Resident</div>
+              <div class="personalInfoCell"><b>Wants:</b> Eversource to not build the substation</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> feel like her voice has been
+                heard and her needs are not ignored</div>
+            </div>
+          </div>
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-15SeanLydon.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Sean Lydon</b>, City Deputy of Inspectional S
+                ervices</div>
+              <div class="personalInfoCell"><b>Wants:</b> to enforce building, housing, health,
+                sanitation, and safety regulations</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> protect and improve the
+                quality
+                of life for all Boston residents.</div>
+            </div>
+          </div>
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic" src="inspiration/210329 SitePeople-14KimJaney.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Kathleen Theoharides,</b>, Energy & Environmental
+                Affairs Secretary</div>
+              <div class="personalInfoCell"><b>Wants:</b> to lead MA’s efforts on climate change</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> provide reliable and
+                responsible energy options for the state of Massachusetts</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="peopleRow">
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-13PatrickDawson.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Patrick Dawson</b>, Northeastern Student</div>
+              <div class="personalInfoCell"><b>Wants:</b> An inclusive and fair building process</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that I can:</b> feel like my architectural edu-
+                cation and skillset can used for the good of the public</div>
+            </div>
+          </div>
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-16LydiaEdwards.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Lydia Edwards</b>, East Boston’s City Councilor</div>
+              <div class="personalInfoCell"><b>Wants:</b> to represent my District’s desires to the
+                best of my ability to City Hall</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that she can:</b> ensure constituents within
+                her districts feel taken care of</div>
+            </div>
+          </div>
+          <div class="peopleCell">
+            <div class="personInnerPicCell"><img class="peoplePic"
+                src="inspiration/210329 SitePeople-19AdrianMadaro.svg" />
+            </div>
+            <div class="personInnerTextCell">
+              <div class="personalInfoCell"><b>Adrian Madaro,</b>, Mass State Representative</div>
+              <div class="personalInfoCell"><b>Wants:</b> to expand quality of public space,
+                equity among East Boston’s diverse population</div>
+              <div class="personalInfoCell personalInfoCellThree"><b>So that he can:</b> provide equal resources and
+                opportunities to East Boston residents</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dropdownContentWrapper">
+    <div class="ColumnTitles">
+      <div class="HalfPageColumnTitle">
+        <h1> HISTORY </h1>
+
+      </div>
+      <div class="HalfPageColumnTitle">
+        <h1> FUTURE </h1><br>
+
+      </div>
+    </div>
+    <div class="splitDivWrapper">
+      <div class="splitDiv">
+        <div class="columnWrapper" id="columnWrapperLeft">
+          <div class="coverSliderDiv" id="coverLeft"></div>
+          <div class="buttonContainer">
+
+            <div class="drawerButton"><button id="1" type="button" class="collapsibleBtn">Neighborhood</button>
+            </div>
+            <div class="drawerButton"><button id="2" type="button" class="collapsibleBtn">Site</button></div>
+            <div class="drawerButton"><button id="3" type="button" class="collapsibleBtn">People</button></div>
+            <div onclick="expand('Left')" class="expandDivOnLeft"></div>
+            <div onclick="evenOut()" style="right: 0;" class="evenOutDiv"></div>
+          </div>
+
+
+          <div class="column">
+            <div class="collapsibleDiv" id="collapsibleDiv1">ENVIRONMENTAL INJUSTICE IN EAST BOSTON
+              <br />“A highway to the airport cuts through the community. The Chelsea
+              Creek, a tidal estuary and federal shipping channel that bounds East
+              Boston on the north side, accommodates 100% of Logan’s jet fuel, 79%
+              of the gasoline used in Massachusetts, 66% of home heating oil for the
+              region, and road salt for over 300 communities
+
+              <br />
+              <br />
+              INDUSTRY RULES OVER NEIGHBORHOOD
+              East Boston’s industrial past has impacted soil quality, pollution of
+              the air and water, and as the airport expands, the effects permeate the
+              long-time resident and recent condo-owners alike
+            </div>
+            <div class="collapsibleDiv" id="collapsibleDiv2">
+
+
+
+
+
+
+              THE CONDOR STREET SUBSTATION <br />
+
+              In 2014, local energy provider Eversource proposed building a high
+              voltage electrical substation. Part of a larger electrical transmission project, the substation was
+              put
+              forth by Eversource as a “needed piece of
+              critical infrastructure.” Of much concern to the community was the suggested placement of the
+              substation
+              across the street from an existing
+              playground, on city-owned land originally slated for a soccer field.
+              <br /><br />
+              “CRITICAL” INFRASTRUCTURE<br />
+
+              Electric demand is growing in eastern Massachusetts. The area
+              needs an additional substation and transmission capacity to support the
+              reliable delivery of electric power to meet the region’s current demand.
+              This is contrary according to what New England’s report of Capacity,
+              Energy, Loads, and Transmission Report claims is going to happen, in
+              part due to a wider adoption of off-grid energy solutions.
+              <br />
+              <br />
+
+              THE ISSUE IS THE SITE<br />
+              “We didn’t look at a lot of other areas because we had the available land”
+              “Are we saying it’s perfect? There’s no perfect location”
+              - Eversource’s Bob Clark, Director of Siting and Project Outreach <br /> <br />
+              THE SITE WILL FLOOD<br />
+              “None of their flood risk modeling takes into account the role of storm
+              water flooding due to intense rain and backed-up sewers.”
+              -Marcos Luna, Resident and Geology Professor
+            </div>
+            <div class="collapsibleDiv" id="collapsibleDiv3"> COMMUNITY CHARACTERISTICS
+              <br />
+              “The East Boston population is 53% Latinx, with 17% of residents living below the poverty line. Over
+              the
+              years the immigrant faces of “Eastie” have changed from Jewish, Canadian, Irish, and Italian, to
+              Colombian,
+              Salvadoran, and Middle Eastern. East Boston has proudly identified as an
+              immigrant neighborhood that has served as a “gateway community” for
+              many families”<br /><br />
+              “People of color make up more than 60% of the population, greater
+              than 45% of the population are immigrants, which has led to the state designating the neighborhood as
+              an
+              Environmental Justice Population” <br /><br />
+              “While the various waves of immigrants have been diverse in language
+              and culture, until recently, they were unified in their working-class status.
+              The newest arrivals to the neighborhood do not share this background, as
+              they purchase newly renovated condominiums that were once rental tenement apartments.”
+
+              <br />
+              <br />
+              FURTHER DIVIDING THIS CULTURAL LANDSCAPE<br />
+              “During a decisive November 2017 hearing, the board did not provide two-way
+              interpretation services in Spanish or Portuguese, spoken by Eastie’s Brazilian immigrants, or, for
+              that
+              matter, any other language. Although siting board members were
+              able to hear the English interpretation of Spanish testimony from community members,
+              community members were not provided with an interpretation of the meeting’s proceedings, which were in
+              English”
+              <br />- Orion Magazine’s Unjust Legacy<br /><br />
+              “You take a low-income neighborhood, and someone comes in and says we’re
+              going to put in this dicey sort of substation. These are the kinds of things that benefit
+              the region as a whole, and yet the burden that they represent is only held by a certain
+              community”<br />
+              - Resident and Greenpeace Organizer John Walkey<br /><br />
+              “This electrical substation: that’s the ugliest thing I’ve seen yet on the screen. Putting it there,
+              it’s like putting liverwurst in an Italian cannoli.”
+              <br />- Resident Fran Ippolito Riley<br /><br />
+              LETTER TO KATHLEEN THEOHARIDES<br />
+              (Energy and Environmental Affairs Secretary)<br />
+              “For far too long, black, brown, and immigrant communities have been
+              excluded from the decision-making processes that directly affect their
+              quality of life. We must address the inequities that intersect race, class,
+              and public health, and that begins with ensuring that the residents of East
+              Boston have a full say in the evolution of their neighborhood”...<br />
+              Signed by:<br />
+              Elizabeth Warren, Ed Markey, Ayanna Pressley, Katherine Clark,
+              Joseph P. Kennedy, Adrian Madaro, Joseph Boncore, Sal DiDomenico,
+              Jamie Eldridge, Daniel Ryan, Liz Miranda, Michelle Dubois,
+              Lydia Edwards, Julia Mejia, Michelle Wu, Annissa Essaibi-George
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="columnWrapper" id="columnWrapperRight">
+          <div class="coverSliderDiv" id="coverRight"></div>
+          <div class="buttonContainer">
+            <div class="drawerButton"><img id="4" class="collapsibleBtn"
+                src="newestInspo/210429 Mapdiv Landing Ishe-18 facts.svg"></div>
+            <div class="drawerButton"><img id="5" class="collapsibleBtn"
+                src="newestInspo/210429 Mapdiv Landing Ishe-17 people.svg"></div>
+            <div class="drawerButton"><img id="6" class="collapsibleBtn"
+                src="newestInspo/210429 Mapdiv Landing Ishe-16 history.svg"></div>
+            <div class="drawerButton"><img id="7" class="collapsibleBtn"
+                src="newestInspo/210429 Mapdiv Landing Ishe-15 actions.svg"></div>
+            <div class="drawerButton"><img id="8" class="collapsibleBtn"
+                src="newestInspo/210429 Mapdiv Landing Ishe-14 goals.svg"></div>
+
+          </div>
+
+          <div class="column" id="columnB">
+            <div class="collapsibleDiv" id="collapsibleDiv4">
+              <img class="svgHolder" src="factspage/210429 OUTLINE Facts Context Drawing-22-19.svg" />
+              <img class="svgHolder" src="factspage/210429 OUTLINE Facts Context Drawing-22-20.svg" />
+              <img class="svgHolder" src="factspage/210429 Facts Pages-21.svg" />
+              <img class="svgHolder" src="factspage/210429 Facts Pages-22.svg" />
+              <img class="svgHolder" src="factspage/210429 Facts Pages-23.svg" />
+              <img class="svgHolder" src="factspage/210429 Facts Pages-24.svg" />
+              <img class="collapsibleBtn" id="5" src="inspiration/210429 Responsible Button-25.svg" />
+            </div>
+            <div class="collapsibleDiv" id="collapsibleDiv5"> 
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-26.svg" />
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-27.svg" />
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-28.svg" />
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-29.svg" />
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-30.svg" />   
+            	<img class="collapsibleBtn" id="6" src="inspiration/210429 Other Buttonsl-32.svg" />  
+            	<img class="collapsibleBtn" id="5" src="inspiration/210429 Studio Final-31.svg" />        	
+            	<img class="collapsibleBtn" id="7" src="inspiration/210429 Other Buttonsl-33.svg" />
+            </div>
+
+
+            <div class="collapsibleDiv" id="collapsibleDiv6"> 
+            	<img class="collapsibleBtn" id="6" src="timelinepage/210429 Studio Final-39.svg" />
+            	<img class="collapsibleBtn" id="6" src="timelinepage/210429 Studio Final-35.svg" />
+            	<img class="collapsibleBtn" id="6" src="timelinepage/210429 Studio Final-36.svg" />
+            	<img class="collapsibleBtn" id="6" src="timelinepage/210429 Studio Final-37.svg" />
+            	<img class="collapsibleBtn" id="6" src="timelinepage/210429 Studio Final-38.svg" />
+            	<img class="collapsibleBtn" id="7" src="inspiration/210429 Other Buttonsl-33.svg" />
+            </div>
+
+            <div class="collapsibleDiv" id="collapsibleDiv7"> 
+            	<img class="collapsibleBtn" id="7" src="actionspage/210429 Actions Studio Final-40.svg" />
+            	<img class="collapsibleBtn" id="7" src="actionspage/210429 Actions Studio Final-41.svg" />
+            	<img class="collapsibleBtn" id="7" src="actionspage/210429 Actions Studio Final-42.svg" />
+            	<img class="collapsibleBtn" id="7" src="actionspage/210429 Actions Studio Final-43.svg" />
+            </div>
+                     <div class="collapsibleDiv" id="collapsibleDiv8"> My goal is to identify a mutually agreed upon
+              framework
+              between industry members, community members, and government officials for the
+              future of the Condor Street Site. <br /><br />
+              I believe in enabling community power with local infrastructure as a
+              counter to Eversource’s regional power and private infrastructure. East
+              Boston has shown it can handle co-existence with heavy industry, but to
+              completely ignore the will of the residents and elected officials cannot
+              be tolerated.<br /><br />
+              I wish to transcend language barriers, cultural differences, and material resources towards an
+              inclusively and equitably powered future that
+              both powers, and empowers, the communities in which these projects
+              will exist.</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="EndText">
+    </div>
+  </div>
+  </div>
+  <center style="
+    display: none;
+">
+
+    </script>
+    <canvas>
+      <!---HERE IT BE--></canvas></center>
+</body>
+
 </html>
