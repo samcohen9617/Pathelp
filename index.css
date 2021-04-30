@@ -1,6 +1,7 @@
 .introDiv {
   position: relative;
   margin-bottom: 60px;
+  display: none;
 }
 @font-face {
   font-family: 'nimbus_sans_lregular';
@@ -16,12 +17,15 @@
   font-style: normal;
 
 }
-
+.illustration{
+  display: none;
+}
+.svgHolder{
+  max-width: 100%;
+}
 
 .splitDiv {
-  display: flex;
   width: 100%;
-  height: 100%;
 }
 .column {
   justify-content: center;
@@ -33,7 +37,6 @@
   padding-right: 30px;
 }
 .splitDivWrapper {
-  height: 90vh;
 }
 .contentText {
   text-align: center;
@@ -56,7 +59,7 @@
   padding-bottom: 30px;
 }
 .ColumnTitles {
-  display: flex;
+  display: none;
   height: 100px;
   width: 100%;
   padding-bottom: 50;
@@ -81,6 +84,9 @@
   height: 100%;
   background-color: white;
   text-align: center;
+}
+#columnWrapperLeft{
+  display: none;
 }
 
 .columnWrapper {
@@ -114,6 +120,7 @@
   -moz-transition: opacity 2s ease-in-out;
   -ms-transition: opacity 2s ease-in-out;
   -o-transition: opacity 2s ease-in-out;
+  display: none;
 }
 
 .evenOutDiv {
@@ -138,6 +145,7 @@
   max-height: 0px;
   width: 100%;
   text-align: center;
+  overflow-y: scroll;
 }
 
 @keyframes expand {
@@ -195,6 +203,11 @@ div.columnWrapper:hover:-webkit-scrollbar {
 }
 
 .dropdownContentWrapper {
+  
+  
+}
+
+#columnB{
   height: 0;
   overflow: hidden;
   -webkit-transition: height 5s;
@@ -255,7 +268,7 @@ div.columnWrapper:hover:-webkit-scrollbar {
 }
 
 .peopleTbl {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-left: 40px;
   padding-right: 40px;
@@ -305,4 +318,8 @@ div.columnWrapper:hover:-webkit-scrollbar {
 .personalInfoCellThree{
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -1,18 +1,30 @@
 var loaded = false;
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   if (!loaded) {
     var coll = document.getElementsByClassName("collapsibleBtn");
     var startingLeft = document.getElementById("collapsibleDiv1");
     startingLeft.style.display = "block";
     startingLeft.style.maxHeight = startingLeft.scrollHeight + "px";
 
-    var startingRight = document.getElementById("collapsibleDiv4");
-    startingRight.style.display = "block";
-    startingRight.style.maxHeight = startingRight.scrollHeight + "px";
+
 
     for (var i = 0; i < coll.length; i++) {
-      coll[i].onclick = function(e) {
-        drawerClick(e);
+      coll[i].onclick = function (e) {
+        var dropdownDiv = document.getElementById('columnB');
+        if (dropdownDiv.style.height != "100vh") {
+          expandDown();
+          var id = e.srcElement.id;
+          var content = document.getElementById("collapsibleDiv" + id);
+          content.style.display = "block";
+          setTimeout(function () {
+
+            content.style.maxHeight = "100vh";
+          }, 1000);
+
+        } else {
+          drawerClick(e);
+        }
+
       };
     }
     loaded = true;
@@ -20,8 +32,9 @@ window.addEventListener("load", function() {
 });
 
 function drawerClick(e) {
-  var id = event.srcElement.id;
+  var id = e.srcElement.id;
   var content = document.getElementById("collapsibleDiv" + id);
+  content.style.display = "block";
   if (content.style.maxHeight == "0px" || content.style.maxHeight == "") {
     {
       var startIdx;
@@ -31,20 +44,19 @@ function drawerClick(e) {
         endIdx = 4;
       } else {
         startIdx = 4;
-        endIdx = 7;
+        endIdx = 9;
       }
       for (var j = startIdx; j < endIdx; j++) {
         if (j != id) {
           var otherDrawers = document.getElementById("collapsibleDiv" + j);
           otherDrawers.style.maxHeight = "0px";
-          setTimeout(function() {
+          setTimeout(function () {
             otherDrawers.style.display = "none";
           }, 900);
         }
       }
-      setTimeout(function() {
-        content.style.display = "block";
-        content.style.maxHeight = content.scrollHeight + "px";
+      setTimeout(function () {
+        content.style.maxHeight = "100vh";
       }, 1000);
     }
   }
@@ -63,7 +75,7 @@ function expand(side) {
     "evenOutDiv"
   )[0];
   evenOutDiv.style.display = "block";
-  setTimeout(function() {
+  setTimeout(function () {
     evenOutDiv.style.opacity = 1;
   }, 300);
 
@@ -78,7 +90,7 @@ function expand(side) {
   //Expanding the selected side
   columnWrapperToExpand.style.animation = "expand 2s";
   columnWrapperToShrink.style.animation = "shrink 2s";
-  setTimeout(function() {
+  setTimeout(function () {
     columnWrapperToExpand.style.flex = 1;
     columnWrapperToShrink.style.flex = 0;
   }, 1950);
@@ -100,14 +112,14 @@ function evenOut() {
   }
 
   //Hiding even out buttons after they are no longer needed
-  setTimeout(function() {
+  setTimeout(function () {
     evenOutButtonDivs[0].style.display = "none";
     evenOutButtonDivs[1].style.display = "none";
   }, 500);
 
   //Pulling back curtain from shrunken but now expanding side
 
-  setTimeout(function() {
+  setTimeout(function () {
     var coverSliders = document.getElementsByClassName("coverSliderDiv");
     for (var i = 0; i < coverSliders.length; i++)
       if (coverSliders[i].style.width == "100%") {
@@ -115,16 +127,26 @@ function evenOut() {
       }
   }, 1000);
 
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("columnWrapperRight").style.flex = 0.5;
     document.getElementById("columnWrapperLeft").style.flex = 0.5;
   }, 1950);
 }
 
 function expandDown() {
-  var dropdownDiv = document.getElementsByClassName(
-    "dropdownContentWrapper"
-  )[0];
-  dropdownDiv.style.height = "100vh";
-  dropdownDiv.style.borderStyle = "dashed";
+  var dropdownDiv = document.getElementById('columnB');
+  if (dropdownDiv.style.height != "100vh") {
+
+    dropdownDiv.style.height = "100vh";
+    const yOffset = 300;
+    const y = dropdownDiv.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    setTimeout(function () {
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });
+    }, 1500);
+
+  }
 }
+
